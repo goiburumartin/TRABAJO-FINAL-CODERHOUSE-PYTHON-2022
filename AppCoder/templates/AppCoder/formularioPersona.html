@@ -1,0 +1,39 @@
+{% extends "AppCoder/inicio.html"%}
+
+{% load static %}
+
+{% block herencia %}
+
+  
+
+    <h1>-Editar Dueñx-</h1>
+    
+    {% if  miFormularioPersona.errors %}
+
+    <p style="color: red;"> Los datos no coinciden, volve a intentar!</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+
+       
+        <table>
+
+            {{  miFormularioPersona.as_table }}
+
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
+  
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,25 @@
+{% extends "AppCoder/inicio.html"%}
+
+{% load static %}
+
+{% block herencia %}
+    
+    <h1>Lista de los veterinarios.</h1>
+
+   <ul>
+    {% for v in veterinarios %}
+        <li>{{v}}</li>
+        <button>
+            <a href="">Eliminar </a>
+            <a href="">Actualizar</a>
+        </button>
+        <br>
+    {% endfor %}
+    </ul>
+    <p>
+        <a href="formularioVeterinario">Agregar</a>
+        
+    </p>    
+    
+
+{% endblock %}
